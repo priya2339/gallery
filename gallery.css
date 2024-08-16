@@ -1,0 +1,170 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(117, 112, 112, 0.9);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 5%;
+    margin-bottom: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+
+}
+
+.navbar ul li {
+    font-family: century;
+    font-size: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(26, 20, 20);
+    padding: 8px 25px;
+    transition: all 0.5s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+
+#animal{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#flowers {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#birds{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#nature{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.thumbnail {
+    width: calc(25% - 10px);
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border: 15px solid white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: rgb(232, 248, 11);
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: 100px;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: red;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: rgb(224, 208, 208);
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.3s;
+    user-select: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.prev {
+    left: 40px;
+}
+
+.next {
+    right: 40px;
+}
+
+.prev:hover, .next:hover {
+    color: #ccc;
+}
+
+
+
